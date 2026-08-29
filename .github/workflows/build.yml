@@ -37,19 +37,8 @@ jobs:
           mkdir -p public
           cp Pragathi_Jayasinghe_CV.pdf public/
 
-          # Create auto-redirect page for GitHub Pages
-          cat << 'EOF' > public/index.html
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta http-equiv="refresh" content="0; url=./Pragathi_Jayasinghe_CV.pdf" />
-              <title>Pragathi Jayasinghe - CV</title>
-            </head>
-            <body>
-              <p>Redirecting to CV... <a href="./Pragathi_Jayasinghe_CV.pdf">Click here</a> if not redirected.</p>
-            </body>
-          </html>
-          EOF
+          # Copy the custom landing page
+          cp index.html public/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
