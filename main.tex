@@ -52,13 +52,6 @@ urlcolor=primaryColor
 \setlength{\parindent}{0pt}
 \setlength{\topskip}{0pt}
 \setlength{\columnsep}{0.15cm}
-\makeatletter
-\let\ps@customFooterStyle\ps@plain
-\patchcmd{\ps@customFooterStyle}{\thepage}{
-	\color{gray}\textit{\small  Page \thepage{} of \pageref*{LastPage}}
-}{}{}
-\makeatother
-\pagestyle{customFooterStyle}
 
 \titleformat{\section}{
 	\needspace{4\baselineskip}
